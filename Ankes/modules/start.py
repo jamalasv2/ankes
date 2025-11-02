@@ -1,4 +1,4 @@
-from pyrogram import filters
+from pyrogram import filters, Message
 from pyrogram.enums import ChatType
 
 from Ankes import app
