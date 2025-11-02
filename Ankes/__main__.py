@@ -17,7 +17,6 @@ async def main():
         module_name = getattr(imported_module, "__MODULE__", "").replace(" ", "_").lower()
         if module_name:
             HELP_COMMANDS[module_name] = imported_module
-        LOGGER("JamalasxPlugins").info("berhasil memuat semua modul")
     await idle()
     await app.stop()
     LOGGER("JamalasxAnkes").info("bot ankes dinonaktifkan")
