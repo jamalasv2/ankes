@@ -29,5 +29,6 @@ class Bot(Client):
 
     async def stop(self):
         await super().stop()
-        LOGGER(__name__).info("bot dinonaktifkan")
+
+app = Bot()
 
