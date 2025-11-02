@@ -5,13 +5,18 @@ from pyrogram import idle
 
 from config import LOGGER
 from Ankes import app
-from Ankes.modules import ALL_MODULES
+from Ankes.modules import loadModule
 
+HELP_COMMANDS = {}
 
 async def main():
     await app.start()
-    for all_module in ALL_MODULES:
-        importlib.import_module("Ankes.modules" + all_module)
+    modules = loadModule()
+    for mod in modules:
+        imported_module = import_module(f"Ankes.modules.{mod}")
+        module_name = getattr(imported_module, "__MODULE__", "").replace(" ", "_").lower()
+        if module_name:
+            HELP_COMMANDS[module_name] = imported_module
         LOGGER("JamalasxPlugins").info("berhasil memuat semua modul")
     await idle()
     await app.stop()
