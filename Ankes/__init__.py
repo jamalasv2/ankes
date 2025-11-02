@@ -10,7 +10,7 @@ from config import (
 
 class Bot(Client):
     def __init__(self):
-        LOGGER("JamalasxAnkes").info("memulai bot..")
+        LOGGER("JamalasxAnkes").info("🔁 memulai bot..")
         super().__init__(
             name="ankes",
             api_id=API_ID,
@@ -27,7 +27,7 @@ class Bot(Client):
         self.username = self.me.username
         self.mention = self.me.mention
 
-        LOGGER("JamalasxAnkes).info(f"bot ankes [ {self.name} ] diaktifkan"))
+        LOGGER("JamalasxAnkes").info(f"✅ bot ankes [ {self.name} ] diaktifkan"))
 
     async def stop(self):
         await super().stop()
