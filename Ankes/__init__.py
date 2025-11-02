@@ -26,7 +26,7 @@ class Bot(Client):
         self.username = self.me.username
         self.mention = self.me.mention
 
-        LOGGER(__name__).info(f"ankes [ {self.name} ] diaktifkan")
+        LOGGER("JamalasxAnkes).info(f"bot ankes [ {self.name} ] diaktifkan")
 
     async def stop(self):
         await super().stop()
