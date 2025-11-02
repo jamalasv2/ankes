@@ -6,5 +6,5 @@ from Ankes import app
 
 
 @app.on_message(filters.command(["start"]) & filters.private)
-async def start_pm(client, message: Message, _):
+async def start_pm(client, message: Message):
     await message.reply("hai kampang")
