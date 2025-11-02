@@ -17,7 +17,7 @@ class Bot(Client):
             bot_token=BOT_TOKEN,
             in_memory=True,
             parse_mode=ParseMode.HTML,
-            max_concurrent_transmission=7,
+            max_concurrent_transmissions=7,
         )
     async def start(self):
         await super().start()
