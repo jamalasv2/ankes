@@ -10,7 +10,7 @@ async def main():
     await app.start()
     await idle()
     await app.stop()
-    LOGGER("JamalasxAnkes").info("ankes dinonaktifkan")
+    LOGGER("JamalasxAnkes").info("bot ankes dinonaktifkan")
 
 
 if __name__ == "__main__":
