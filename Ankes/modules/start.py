@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.enums import ChatType
-from pyrogram.types import MESSAGE
+from pyrogram.types import Message
 
 from Ankes import app
 
